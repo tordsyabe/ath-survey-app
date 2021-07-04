@@ -1,7 +1,11 @@
 from flask import Blueprint, render_template
 
-survery_page = Blueprint("survery_page", __name__, template_folder="templates")
+survey_page = Blueprint("survey_page", __name__, template_folder="templates")
 
-@survery_page.route("/surveys")
-def survery_index():
+@survey_page.route("/surveys", methods=['GET'])
+def survey_index():
     return render_template("index.html")
+
+@survey_page.route("/surveys/conduct", methods=['GET', 'POST'])
+def conduct_survey():
+    return render_template("conduct.html")
