@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, jsonify
+from athsurveyapp.services.branch_service import get_branches, get_employees
 
 survey_page = Blueprint("survey_page", __name__, template_folder="templates")
 
@@ -8,4 +9,14 @@ def survey_index():
 
 @survey_page.route("/surveys/conduct", methods=['GET', 'POST'])
 def conduct_survey():
-    return render_template("conduct.html")
+
+    branches = get_branches()
+
+    return render_template("conduct.html", branches=branches)
+
+@survey_page.route("/employees/<id>")
+def get_employees_by_company(id):
+
+    employees = get_employees(id)
+
+    return jsonify(employees)
