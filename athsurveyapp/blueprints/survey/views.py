@@ -14,6 +14,11 @@ def conduct_survey():
 
     return render_template("conduct.html", branches=branches)
 
+@survey_page.route("/surveys/create", methods=['GET', 'POST'])
+def create_survey():
+
+    return render_template("createsurvey.html")
+
 @survey_page.route("/employees/<id>")
 def get_employees_by_company(id):
 
