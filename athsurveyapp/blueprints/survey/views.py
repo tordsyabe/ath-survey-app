@@ -9,7 +9,7 @@ def survey_index():
 
 @survey_page.route("/surveys/conduct", methods=['GET', 'POST'])
 def conduct_survey():
-
+    
     branches = get_branches()
 
     return render_template("conduct.html", branches=branches)
