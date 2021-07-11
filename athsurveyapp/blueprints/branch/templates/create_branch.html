@@ -71,9 +71,15 @@ endblock %} {% block body %}
           <!--  -->
 
           <div class="mt-5">
-            <button class="btn btn-primary float-right">Save</button>
+            <button type="submit" class="btn btn-primary float-right">
+              Save
+            </button>
 
-            <button class="btn btn-secondary float-right mr-2">Cancel</button>
+            <a
+              href="{{ url_for('branch_page.branch_index') }}"
+              class="btn btn-secondary float-right mr-2"
+              >Cancel</a
+            >
           </div>
         </fieldset>
       </form>

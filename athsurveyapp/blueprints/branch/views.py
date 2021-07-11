@@ -7,7 +7,11 @@ branch_page = Blueprint('branch_page', __name__, template_folder='templates')
 
 @branch_page.route('/', methods=['GET'])
 def branch_index():
-    return render_template('branches.html')
+
+    branches = Branch.query.all()
+    print(branches)
+
+    return render_template('branches.html', branches=branches)
 
 
 @branch_page.route('/create', methods=['GET', 'POST'])

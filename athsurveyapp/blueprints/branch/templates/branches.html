@@ -14,5 +14,26 @@
       >
     </div>
   </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Branch Name</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for branch in branches %}
+          <tr>
+            <td>{{ branch.name }}</td>
+            <td>{{ branch.address }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 {% endblock %}
