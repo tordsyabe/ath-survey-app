@@ -1,0 +1,80 @@
+{% extends 'layouts/base.html' %} {% block title %}ATH - Create Survey{%
+endblock %} {% block meta_description %}Arabian Tea House survey application{%
+endblock %} {% block body %}
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12">
+      <h1>New survey</h1>
+    </div>
+
+    <div class="col-12 mt-5 bg-light">
+      <form action="#" method="POST">
+        <fieldset class="p-5">
+          <div class="row">
+            <!--  -->
+            <div class="col-3">
+              <label
+                class="form-label font-weight-bold float-right mt-2"
+                for="branch"
+              >
+                Description
+              </label>
+            </div>
+
+            <div class="col-7">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id=""
+                  aria-describedby="emailHelp"
+                  placeholder="Description"
+                />
+              </div>
+            </div>
+
+            <div class="col-2 offset-3">
+              <div class="invalid-feedback">Description is required</div>
+            </div>
+            <!--  -->
+          </div>
+
+          <div class="mb-1 row align-items-center">
+            <div class="col-3">
+              <label
+                class="form-label font-weight-bold float-right"
+                for="category"
+              >
+                Category
+              </label>
+            </div>
+
+            <div class="col-7">
+              <div class="form-group">
+                <select
+                  class="
+                    form-control form-select form-select-sm
+                    selectpicker
+                    w-100
+                  "
+                  name="category"
+                  id="category"
+                  data-live-search="true"
+                >
+                  <option value="1"></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-2 offset-3">
+              <div class="invalid-feedback">Survey category is required</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary mt-5 float-right">Save</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
