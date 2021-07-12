@@ -1,12 +1,12 @@
 $(document).ready(function () {
   // Bootsrap select picker
-  $("select").selectpicker();
+  $(".selectpicker").selectpicker();
 
   var current_fs, next_fs, previous_fs; //fieldsets
   var opacity;
 
   $(".next").click(function (event) {
-      event.preventDefault();
+    event.preventDefault();
     current_fs = $(this).parent();
     next_fs = $(this).parent().next();
 

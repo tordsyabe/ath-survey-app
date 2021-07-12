@@ -9,27 +9,19 @@ endblock %} {% block body %}
 
     <div class="col-12 mt-5 bg-light">
       <form method="POST">
+        {{ form.csrf_token }}
+
         <fieldset class="p-5">
           <div class="row">
             <!--  -->
             <div class="col-3">
-              <label
-                class="form-label font-weight-bold float-right mt-2"
-                for="name"
-              >
-                Branch Name
-              </label>
+              {{ form.name.label(class="form-label font-weight-bold float-right
+              mt-2") }}
             </div>
 
             <div class="col-7">
               <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Branch name"
-                  name="name"
-                  id="name"
-                />
+                {{ form.name(class_="form-control", placeholder="Branch name")}}
               </div>
             </div>
 
@@ -43,23 +35,13 @@ endblock %} {% block body %}
           <!--  -->
           <div class="row">
             <div class="col-3">
-              <label
-                class="form-label font-weight-bold float-right mt-2"
-                for="address"
-              >
-                Address
-              </label>
+              {{ form.address.label(class="form-label font-weight-bold
+              float-right mt-2") }}
             </div>
 
             <div class="col-7">
               <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="address"
-                  id="address"
-                  placeholder="Address"
-                />
+                {{ form.address(class_="form-control", placeholder="Address")}}
               </div>
             </div>
 

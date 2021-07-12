@@ -1,16 +1,16 @@
-{% extends 'layouts/base.html' %} {% block title %}ATH - Branches{% endblock %}
+{% extends 'layouts/base.html' %} {% block title %}ATH - Employees{% endblock %}
 {% block meta_description %}Arabian Tea House survey application{% endblock %}
 {% block body %}
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-6">
-      <h1 class="m-0">Branches</h1>
+      <h1 class="m-0">Employees</h1>
     </div>
     <div class="col-6">
       <a
-        href="{{url_for('branch_page.create_branch')}}"
+        href="{{url_for('employee_page.create_employee')}}"
         class="btn btn-primary float-right mr-2"
-        >Create branch</a
+        >Create employee</a
       >
     </div>
   </div>
@@ -20,17 +20,19 @@
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col">Branch Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Employees</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Code</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Branch</th>
           </tr>
         </thead>
         <tbody>
-          {% for branch in branches %}
+          {% for employee in employees %}
           <tr>
-            <td>{{ branch.name }}</td>
-            <td>{{ branch.address }}</td>
-            <td>{{ branch.employees | length }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.code }}</td>
+            <td>{{ employee.designation }}</td>
+            <td>{{ employee.branch.name }}</td>
           </tr>
           {% endfor %}
         </tbody>

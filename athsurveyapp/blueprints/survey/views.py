@@ -6,7 +6,7 @@ survey_page = Blueprint("survey_page", __name__, template_folder="templates")
 
 @survey_page.route("/", methods=['GET'])
 def survey_index():
-    return render_template("surverys.html")
+    return render_template("surveys.html")
 
 
 @survey_page.route("/create", methods=['GET', 'POST'])
