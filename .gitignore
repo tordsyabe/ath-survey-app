@@ -89,4 +89,4 @@ ENV/
 .ropeproject
 
 /chromedriver.exe
-© 2021 GitHub, Inc.
+/*.sqlite
