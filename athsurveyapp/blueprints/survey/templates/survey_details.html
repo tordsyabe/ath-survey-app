@@ -12,7 +12,8 @@ block body %}
 
   <div class="row mt-5">
     <div class="col-12">
-      {% for question in survey.questions %} {{question.value}}
+      <p class="font-weight-bold">Questions</p>
+      {% for question in survey.questions %}
       <h5 class="font-weight-bold">{{ question.description }}</h5>
       {% if question.description == "radio" %} {% for num in
       range(int(question.value)) %} {{num}} {% endfor %} {% endif %} {% endfor
