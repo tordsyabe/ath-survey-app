@@ -27,7 +27,7 @@ block body %}
         </thead>
         <tbody>
           {% for survey in surveys %}
-          <tr>
+          <tr class="clickable-row" data-href="{{ survey.id }}">
             <td>{{ survey.name }}</td>
             <td>{{ survey.description }}</td>
           </tr>

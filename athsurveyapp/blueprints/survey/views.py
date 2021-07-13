@@ -31,6 +31,14 @@ def create_survey():
 
     return render_template("create_survey.html", form=form)
 
+
+@survey_page.route("/<id>")
+def survey_details(id):
+
+    survey = Survey.query.get(id)
+
+    return render_template("survey_details.html", survey=survey)
+
 # @survey_page.route("/conduct", methods=['GET', 'POST'])
 # def conduct_survey():
 
